@@ -12,7 +12,7 @@ request.onsuccess = function (e) {
   db = e.target.result;
   // if conditional to check if app is online before reading from db
   if (navigator.onLine) {
-    console.log('Backend is online!');
+    console.log("Backend is online!");
     checkDatabase();
   }
 };
