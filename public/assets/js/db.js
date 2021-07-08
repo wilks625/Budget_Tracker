@@ -1,12 +1,12 @@
 let db;
-// Create a new database request named BudgetDB
+// create a new database request named BudgetDB
 const request = indexedDB.open('BudgetDB', 1);
 
 request.onupgradeneeded = function (e) {
 
     const db = e.target.result;
-    // created an object store named pending and set autoIncrement to true
-    db.createObjectStore('pending', { autoIncrement: true });
+    // create an object store named budgetStore and set autoIncrement to true
+    db.createObjectStore('budgetStore', { autoIncrement: true });
 };
 
 request.onsuccess = function (e) {
@@ -15,4 +15,17 @@ request.onsuccess = function (e) {
     if (navigator.onLine) {
         checkDataBase()
     }
-}
+};
+
+request.onerror = function (e) {
+    console.log("Whoops!" + e.target.errorCode)
+};
+
+function saveRecord(record) {
+    // create a transaction on budgetStore db with readwrite access
+    const transaction = db.transaction(['budgetStore'], 'readwrite');
+    // access budgetStore object
+    const store = transaction.objectStore('budgetStore');
+    // add record to store
+    store.add(record);
+  }
