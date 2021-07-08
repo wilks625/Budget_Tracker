@@ -1,6 +1,6 @@
 let db;
-// create a new database request named BudgetDB
-const request = indexedDB.open("BudgetDB", 1);
+// create a new database request named budget
+const request = indexedDB.open("budget", 1);
 
 request.onupgradeneeded = function (e) {
   const db = e.target.result;
@@ -12,7 +12,7 @@ request.onsuccess = function (e) {
   db = e.target.result;
   // if conditional to check if app is online before reading from db
   if (navigator.onLine) {
-    checkDataBase();
+    checkDatbase();
   }
 };
 
