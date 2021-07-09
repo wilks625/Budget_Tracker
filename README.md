@@ -12,6 +12,11 @@ Link to deployed application:
 
 Below are screenshots of the deployed application:
 
+![Screen Shot 2021-07-08 at 8 11 08 PM](https://user-images.githubusercontent.com/76915726/125005133-01002600-e029-11eb-9170-bb4b623b6017.png)
+![Screen Shot 2021-07-08 at 8 11 57 PM](https://user-images.githubusercontent.com/76915726/125005137-03628000-e029-11eb-84fb-c42bd1cc0485.png)
+![Screen Shot 2021-07-08 at 8 12 11 PM](https://user-images.githubusercontent.com/76915726/125005140-052c4380-e029-11eb-9c7e-c6b458ed2511.png)
+
+
 
 
 
